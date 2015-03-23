@@ -1,0 +1,97 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.pavel.com/bank"
+        xmlns:bnc="http://www.pavel.com/bank">
+
+    <simpleType name="TypeOfAccount">
+        <restriction base="string">
+            <enumeration value="deposit"/>
+            <enumeration value="demand"/>
+            <enumeration value="checking"/>
+            <enumeration value="saving"/>
+            <enumeration value="accumulating"/>
+            <enumeration value="metal"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="account">
+        <sequence>
+            <element name="nameOfBank">
+                <simpleType>
+                    <restriction base="string">
+                        <minLength value="1"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="country">
+                <simpleType>
+                    <restriction base="string">
+                        <minLength value="1"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="typeOfAccount" type="bnc:TypeOfAccount"/>
+
+            <element name="depositor">
+                <simpleType>
+                    <restriction base="string">
+                        <minLength value="1"/>
+                        <maxLength value="30"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="accountID">
+                <simpleType>
+                    <restriction base="long">
+                        <pattern value="\d{13}"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="amount">
+                <simpleType>
+                    <restriction base="double">
+                        <minInclusive value="0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="annualProfit">
+                <simpleType>
+                    <restriction base="float">
+                        <minInclusive value="0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="term">
+                <simpleType>
+                    <restriction base="float">
+                        <minExclusive value="0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+
+        <attribute name="IBAN" type="bnc:Iban" use="required"/>
+
+    </complexType>
+
+    <element name="bank">
+        <complexType>
+            <sequence>
+                <element name = "account" type = "bnc:account"
+                             minOccurs="1" maxOccurs = "unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <simpleType name="Iban">
+        <restriction base="ID">
+            <pattern value="[A-Za-z]{2}[A-Za-z0-9\s_-]+"/>
+        </restriction>
+    </simpleType>
+
+</schema>

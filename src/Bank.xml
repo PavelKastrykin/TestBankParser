@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bnc:bank xmlns:bnc="http://www.pavel.com/bank"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.pavel.com/bank Bank.xsd">
+
+    <account IBAN = "US29NWBK60161331926819" >
+        <nameOfBank>Bank of America</nameOfBank>
+        <country>USA</country>
+        <typeOfAccount>deposit</typeOfAccount>
+        <depositor>Michael Douglas</depositor>
+        <accountID>1325468749562</accountID>
+        <amount>10000000</amount>
+        <annualProfit>5</annualProfit>
+        <term>20</term>
+    </account>
+    <account IBAN = "DE89370400440532013000" >
+        <nameOfBank>Commerzbank</nameOfBank>
+        <country>Germany</country>
+        <typeOfAccount>demand</typeOfAccount>
+        <depositor>Hansi Kuersch</depositor>
+        <accountID>1523614785921</accountID>
+        <amount>250000</amount>
+        <annualProfit>4.5</annualProfit>
+        <term>7</term>
+    </account>
+    <account IBAN = "KZ75125KZT1001300335" >
+        <nameOfBank>KAZKOM</nameOfBank>
+        <country>Kazakhstan</country>
+        <typeOfAccount>checking</typeOfAccount>
+        <depositor>Rustam Nabirov</depositor>
+        <accountID>3251489647513</accountID>
+        <amount>7500000</amount>
+        <annualProfit>13</annualProfit>
+        <term>12</term>
+    </account>
+    <account IBAN = "NL91ABNA0417164300" >
+        <nameOfBank>ABN AMRO</nameOfBank>
+        <country>Netherlands</country>
+        <typeOfAccount>saving</typeOfAccount>
+        <depositor>Floor Jansen</depositor>
+        <accountID>1532486985211</accountID>
+        <amount>50000</amount>
+        <annualProfit>8</annualProfit>
+        <term>5</term>
+    </account>
+    <account IBAN = "UA853996220000000260012335661" >
+        <nameOfBank>Privatbank</nameOfBank>
+        <country>Ukraine</country>
+        <typeOfAccount>accumulating</typeOfAccount>
+        <depositor>Piotr Poroshenko</depositor>
+        <accountID>2564895214783</accountID>
+        <amount>173000</amount>
+        <annualProfit>22</annualProfit>
+        <term>3</term>
+    </account>
+    <account IBAN = "SE4550000000058398257466" >
+        <nameOfBank>Swedbank</nameOfBank>
+        <country>Sweden</country>
+        <typeOfAccount>metal</typeOfAccount>
+        <depositor>Bjorn Borg</depositor>
+        <accountID>1356954785236</accountID>
+        <amount>330000</amount>
+        <annualProfit>7.5</annualProfit>
+        <term>16</term>
+    </account>
+</bnc:bank>
