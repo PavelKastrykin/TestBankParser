@@ -1,9 +1,10 @@
 package com.pavel.bank.parsing.stax;
 
 public enum BankTagItem {
-    ACCOUNT, NAME_OF_BANK, COUNTRY, TYPE_OF_ACCOUNT, DEPOSITOR, ACCOUNT_ID, AMOUNT, ANNUAL_PROFIT, TERM;
+    BANK, ACCOUNT, NAME_OF_BANK, COUNTRY, TYPE_OF_ACCOUNT, DEPOSITOR, ACCOUNT_ID, AMOUNT, ANNUAL_PROFIT, TERM;
 
     public static BankTagItem getElementTagName (String element){
+        if ("bank".equals(element))return BANK;
         if ("account".equals(element)) return ACCOUNT;
         if ("nameOfBank".equals(element)) return NAME_OF_BANK;
         if ("country".equals(element)) return COUNTRY;
